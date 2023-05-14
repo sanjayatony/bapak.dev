@@ -1,35 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+	// create a loop to repeat a text 10 times and display it on the screen using React and TypeScript
+	const upperText = [];
+	const lowerText = [];
+	for (let i = 0; i < 200; i++) {
+		upperText.push(<span key={i}>-bapak/dev-</span>);
+	}
+	for (let i = 0; i < 500; i++) {
+		lowerText.push(<span key={i}>-bapak/dev-</span>);
+	}
+	return (
+		<>
+			<div>
+				<img
+					src="/relax.png"
+					width="150"
+					height="150"
+				/>
+			</div>
+			<h1>bapak/dev</h1>
+			<div className="logo-box">{lowerText}</div>
+		</>
+	);
 }
 
-export default App
+export default App;
